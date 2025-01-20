@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 [ApiController]
-[Route("api/[countroller]")] // /api/users
+[Route("api/[controller]")] // /api/users
 public class UsersController(DataContext context) : ControllerBase
 {
     [HttpGet]
