@@ -25,7 +25,7 @@ export const routes: Routes = [
       },
       {
         path: 'members/:id',
-        component: MemberDetailComponent,
+        component: MemberDetailComponent,  
       },
       {
         path: 'lists',

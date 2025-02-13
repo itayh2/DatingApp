@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-member-detail',
   standalone: true,
   imports: [],
   templateUrl: './member-detail.component.html',
-  styleUrl: './member-detail.component.css'
+  styleUrl: './member-detail.component.css',
 })
 export class MemberDetailComponent {
-
+  
 }
