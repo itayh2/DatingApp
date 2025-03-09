@@ -4,7 +4,6 @@ import {
   inject,
   OnInit,
   ViewChild,
-  viewChild,
 } from '@angular/core';
 import { Member } from '../../_models/member';
 import { AccountService } from '../../_services/account.service';
@@ -45,8 +44,11 @@ export class MemberEditComponent implements OnInit {
   }
 
   updateMember() {
-    console.log(this.member);
-    this.toastr.success('Profile updated successfully');
-    this.editForm?.reset(this.member);
+    this.memberService.updateMember(this.editForm?.value).subscribe({
+      next: (_) => {
+        this.toastr.success('Profile updated successfully');
+        this.editForm?.reset(this.member);
+      },
+    });
   }
 }
