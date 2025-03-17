@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using API.DTOs;
 using API.Entities;
 using API.Extensions;
@@ -16,6 +15,8 @@ public class UsersController(IUserRepository userRepository, IMapper mapper, IPh
     [HttpGet]
     public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery] UserParams userParams)
     {
+        userParams.CurrentUsername = User.GetUsername();
+        
         var users = await userRepository.GetMembersAsync(userParams);
 
         Response.AddPaginationHeader(users);
