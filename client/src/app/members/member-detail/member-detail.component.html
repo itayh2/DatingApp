@@ -18,11 +18,11 @@
         </div>
         <div>
           <strong>Last Active:</strong>
-          <p>{{ member.lastActive }}</p>
+          <p>{{ member.lastActive | timeago }}</p>
         </div>
         <div>
           <strong>Member since:</strong>
-          <p>{{ member.created }}</p>
+          <p>{{ member.created | date : "dd MMM yyyy" }}</p>
         </div>
       </div>
       <div class="card-footer">
@@ -47,7 +47,13 @@
       </tab>
       <tab heading="Photos" #photoTab="tab">
         @if(photoTab.active){
-        <gallery [items]="images" [itemAutosize]="true" [counter]="true" class="gallery"> </gallery>
+        <gallery
+          [items]="images"
+          [itemAutosize]="true"
+          [counter]="true"
+          class="gallery"
+        >
+        </gallery>
         }
       </tab>
       <tab heading="Messages">
