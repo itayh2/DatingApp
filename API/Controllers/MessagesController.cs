@@ -14,7 +14,7 @@ namespace API.Controllers;
 public class MessagesController(IMessageRepository messageRepository, IUserRepository userRepository, IMapper mapper) : BaseApiController
 {
     [HttpPost]
-    public async Task<ActionResult<MessageDto>> CreateMEssage(CreateMessageDto createMessageDto)
+    public async Task<ActionResult<MessageDto>> CreateMessage(CreateMessageDto createMessageDto)
     {
         var username = User.GetUsername();
         if (username == createMessageDto.RecipientUsername.ToLower())
