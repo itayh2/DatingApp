@@ -18,7 +18,7 @@ export class MessageService {
   baseUrl = environment.apiUrl;
   hubUrl = environment.habsUrl;
   private http = inject(HttpClient);
-  private hubConnection?: HubConnection;
+  hubConnection?: HubConnection;
   paginationResult = signal<PaginatedResult<Message[]> | null>(null);
   messageThread = signal<Message[]>([]);
 
