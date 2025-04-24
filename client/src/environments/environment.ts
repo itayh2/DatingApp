@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://localhost:5001/api/',
-  habsUrl: 'https://localhost:5001/hubs/',
+  apiUrl: 'https://dating-app-proj-dpe6f9ghbfdaavap.israelcentral-01.azurewebsites.net/api/',
+  habsUrl: 'https://dating-app-proj-dpe6f9ghbfdaavap.israelcentral-01.azurewebsites.net/hubs/',
 };
